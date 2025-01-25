@@ -32,17 +32,6 @@
   --color-secondary-900: #0c4a6e;
 }
 
-/* When defining theme variables that reference other variables, use the inline option. Using the inline option, the utility class will use the theme variable value instead of referencing the actual theme variable. */
-
-/* 
-The bug: 
-Uncommenting this section will cause production build to miss all the custom styling (primary and secondry colors will be undefined) 
-
-Things I tried:
-1. Maybe we can't have two @theme sections? I tried putting both colors above and shadows below into a single `@theme inline` block, but that causes the page to also lose styles in production (but only some of them).
-2. Putting both of these sections into a single `@theme` (without inline) also causes the page to lose the formatting.
-3. And finally, having a `@theme` section with colors, and `@theme inline` section with shadows referencing the colors works in dev, but causes the production to not have the primary and secondary color variables defined = loss of styling! 
-*/
 @theme inline {
   --shadow-card: 0 0 1px rgb(from var(--color-secondary-400) r g b / 0.12),
     0 1px 2px rgb(from var(--color-secondary-500) r g b / 0.12),
@@ -53,8 +42,7 @@ Things I tried:
       rgb(from var(--color-secondary-500) r g b / 0.08),
     inset 0 2px 4px rgb(from var(--color-secondary-500) r g b / 0.08);
 
-  /* the below definition causes the css to stop renderering in production??? It's the from!!!
-  --shadow-inset: inset 0 1px 2px
-      rgb(from var(--color-secondary-500) r g b / 0.08),
-    inset 0 2px 4px rgb(from var(--color-secondary-500) r g b / 0.08); */
+  /* Uncommenting this section will cause production build to have all the custom styling broken, with no error output in build. The dev build works fine, so it is really easy to deploy a non-styled website as a result of a typo (the typo is 'from' inside var). */
+  --shadow-inset-bad: inset 0 2px 4px
+    rgb(var(from --color-secondary-500) r g b / 0.08);
 }
