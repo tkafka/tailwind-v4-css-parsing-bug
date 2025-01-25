@@ -33,7 +33,7 @@ function App(): JSX.Element {
 
           <div className="space-y-8">
             <h2 className={tokens.h2}>Markdown test</h2>
-            <div className="prose">
+            <div className={`${tokens.cardInset} prose`}>
               <Markdown>{markdownExample}</Markdown>
             </div>
           </div>

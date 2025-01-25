@@ -1,6 +1,7 @@
 export const tokens = {
   container: "container mx-auto px-4 py-8",
-  card: "max-w-md mx-auto bg-white rounded-xl shadow-card overflow-hidden p-6",
+  card: "max-w-md mx-auto bg-white rounded-xl shadow-card p-4",
+  cardInset: "max-w-md mx-auto bg-white rounded-xl shadow-inset p-4",
   h1: "text-4xl font-bold text-gray-900 mb-8 text-center",
   h2: "text-xl font-bold text-gray-900 my-4",
   buttonPrimary:
