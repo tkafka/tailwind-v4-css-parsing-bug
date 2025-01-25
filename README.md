@@ -1,10 +1,10 @@
 # Tailwind 4.0 css parsing bug?
 
-This demo demostrates, how a single typo in `@theme` section in `style.css` causes the page to have broken css in production.
+This demo demonstrates, how a single typo in `@theme` section in `style.css` causes the page to have broken css in production.
 The dev build is fine, and there is no error message in production.
 This can let to a single typo silently breaking the production.
 
-# Reproduction steps:
+## Reproduction steps:
 
 1. Install dependencies:
 
