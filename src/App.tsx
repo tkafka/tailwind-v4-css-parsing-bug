@@ -33,7 +33,9 @@ function App(): JSX.Element {
 
           <div className="space-y-8">
             <h2 className={tokens.h2}>Markdown test</h2>
-            <Markdown>{markdownExample}</Markdown>
+            <div className="prose">
+              <Markdown>{markdownExample}</Markdown>
+            </div>
           </div>
         </div>
 

@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* @config "../../tailwind.config.js"; */
+
+/* legacy form */
+@plugin "@tailwindcss/typography";
+/* this should work: https://github.com/tailwindlabs/tailwindcss-typography/issues/372 - but just produces Can't resolve '@tailwindcss/typography' */
+/* @import "@tailwindcss/typography"; */
+
 @theme {
   /* Colors */
   --color-primary-50: #ecfdf5;
