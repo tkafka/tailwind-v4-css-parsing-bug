@@ -21,7 +21,7 @@ pnpm dev
 3. Production build has broken styling, no error is produced:
 
 ```bash
-pnpm build && pnpm serve
+pnpm build && pnpm preview
 ```
 
 This is caused by a typo in `style.css` in `--shadow-inset-bad` - it has invalid `rgb(var(from --color-secondary-500) r g b / 0.08)` instead of `rgb(from var(--color-secondary-500) r g b / 0.08)` (`from` is in the wrong place).
